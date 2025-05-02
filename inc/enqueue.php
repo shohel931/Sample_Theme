@@ -19,7 +19,7 @@ function sample_theme_enqueue() {
 }
 add_action('wp_enqueue_scripts', 'sample_theme_enqueue');
 
-// Font Awesome
+// Font Awesome and google fornt
 function sample_theme_fonts() {
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css', array(), '6.7.2', false);
 }
