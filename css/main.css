@@ -9,11 +9,6 @@
 #header_area .col-md-3 a img{
     width: 40%;
 }
-#header_area .col-md-3 a h2{
-    color: black;
-    font-size: 25px;
-    font-weight: 700;
-}
 
 
 
@@ -26,7 +21,6 @@
 /* #footer_area{
 } */
 .coppyright_area{
-    background: #000;
     padding: 10px 0;
     color: #fff;
     text-align: center;
