@@ -161,6 +161,12 @@ function sample_theme_customizer_css(){
         .coppyright_area p{
             color: <?php echo get_theme_mod('sample_coppyright_text', '#fff'); ?>;
         }
+        .menu_area ul li a{
+            color: <?php echo get_theme_mod('sample_coppyright_text', '#fff'); ?>;
+        }
+        .menu_area ul li a:hover{
+            color: <?php echo get_theme_mod('sample_coppyright_text', '#fff'); ?>;
+        }
 
         
     </style>
