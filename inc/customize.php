@@ -28,6 +28,23 @@ function sample_global_customize($wp_customize){
         'section' => 'sample_theme_logo',
     )));
 
+    // Coppyright Text
+    $wp_customize-> add_section('sample_coppyright', array(
+      'title' =>__('Coppyright', 'sample_theme'),
+      'description' => __('If you interested to chenge coppyright text', 'sample_theme'),
+      'priority' => 20,
+      'panel' => 'sample_theme_global',
+  ));
+  $wp_customize->add_setting('sample_coppy_setting', array(
+      'default' => '&COPY; Coppyright All Reversed',
+  ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'sample_coppy_setting', array(
+      'label' =>__('Coppyright', 'sample_theme'),
+      'description' => __('If you interested to chenge coppyright text', 'sample_theme'),
+      'setting' => 'sample_coppy_setting',
+      'section' => 'sample_coppyright',
+  )));
+
 
 
 

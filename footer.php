@@ -4,7 +4,7 @@
 <footer id="footer_area">
     <div class="footer_widgets"></div>
     <div class="coppyright_area">
-        <p>&COPY; Coppyright All Reversed</p>
+        <p><?php echo get_theme_mod('sample_coppy_setting'); ?></p>
     </div>
 </footer>
 
