@@ -20,11 +20,33 @@
             <div class="col-md-5">
                 <div class="menu_area">
                 <ul id="nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us <i class="fa-solid fa-angle-down"></i></a>
+            <ul>
+                <li><a href="#">Dropdown</a></li>
+                <li><a href="#">Dropdown</a></li>
+                <li><a href="#">Dropdown</a></li>
+                <li><a href="#">Dropdown</a></li>
+            </ul>
+               </li>
+                <li><a href="#">Service <i class="fa-solid fa-angle-down"></i></a>
+                <ul>
+                <li><a href="#">Dropdown</a></li>
+                <li><a href="#">Dropdown</a></li>
+                <li><a href="#">Dropdown</a></li>
+                <li><a href="#">Dropdown</a></li>
+            </ul>
+               </li>
+                <li><a href="#">Blog <i class="fa-solid fa-angle-down"></i></a>
+                <ul>
+                <li><a href="#">Dropdown</a></li>
+                <li><a href="#">Dropdown</a></li>
+                <li><a href="#">Dropdown</a></li>
+                <li><a href="#">Dropdown</a></li>
+            </ul>
+               </li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
                 </div>
                 
             </div>
