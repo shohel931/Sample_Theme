@@ -17,7 +17,17 @@
                 <a href="<?php echo home_url(); ?>"><img src="<?php echo get_theme_mod('sample_settings'); ?>" alt="">
                 </a>
             </div>
-            <div class="col-md-5">fg</div>
+            <div class="col-md-5">
+                <div class="menu_area">
+                <ul id="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                </div>
+                
+            </div>
             <div class="col-md-4"></div>
         </div>
     </div>

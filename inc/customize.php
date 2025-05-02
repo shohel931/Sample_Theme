@@ -118,6 +118,23 @@ function sample_theme_customize($wp_customize){
         'section' => 'sample_coppy_color',
     )));
 
+    // Coppyright Text color Section
+    $wp_customize-> add_section('sample_coppy_color_text', array(
+        'title' => __('Coppyright Text Color', 'sample_theme'),
+        'description' => __('If you interested to update your coppyright text color, you can do it here.', 'sample_theme'),
+        'priority' => 40,
+        'panel' => 'sample_theme_allcolor',
+    ));
+    $wp_customize->add_setting('sample_coppyright_text', array(
+        'default' => '#fff',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_coppyright_text', array(
+        'label' => __('Color Picker', 'sample_theme'),
+        'description' => __('If you interested to update your coppyright text color, you can do it here.', 'sample_theme'),
+        'setting' => 'sample_coppyright_text',
+        'section' => 'sample_coppy_color_text',
+    )));
+
 
 
 
@@ -140,6 +157,9 @@ function sample_theme_customizer_css(){
         }
         .coppyright_area{
             background-color: <?php echo get_theme_mod('sample_coppyright', '#000'); ?>;
+        }
+        .coppyright_area p{
+            color: <?php echo get_theme_mod('sample_coppyright_text', '#fff'); ?>;
         }
 
         

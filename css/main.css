@@ -10,7 +10,28 @@
     width: 40%;
 }
 
-
+/* Menu */
+.menu_area{
+    margin: 12px 0;
+}
+.menu_area ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.menu_area ul li{
+    margin:0 20px;
+}
+.menu_area ul li a{
+    text-decoration: none;
+    padding:10px 20px;
+    /* background-color: blue; */
+    color: #000;
+    font-weight: bold;
+}
+.menu_area ul li a:hover{
+    color: blue;
+}
 
 
 
