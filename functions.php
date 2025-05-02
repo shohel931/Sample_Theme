@@ -10,6 +10,10 @@ include_once('inc/enqueue.php');
 include_once('inc/customize.php');
 
 
+// Menu Register
+include_once('inc/menu_register.php');
+
+
 
 
 
