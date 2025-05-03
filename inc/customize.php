@@ -124,6 +124,16 @@ function sample_global_customize($wp_customize){
         'setting' => 'sample_widget_bg',
         'section' => 'sample_widget_color',
     )));
+    // Widget Text Color
+    $wp_customize->add_setting('sample_widget_text', array(
+        'default' => '#000',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_widget_text', array(
+        'label' => __('Text Color', 'sample_theme'),
+        'setting' => 'sample_widget_text',
+        'section' => 'sample_widget_color',
+    )));
 
     // Color Area
     $wp_customize-> add_section('sample_color_area', array(
@@ -423,6 +433,10 @@ function sample_theme_customizer_css(){
         a{
             font-family: <?php echo get_theme_mod('mytheme_a_font', '"PT Serif", serif'); ?>;
         }
+        .footer_widgets .col-md-4{
+            color: <?php echo get_theme_mod('sample_widget_text', '#000'); ?>;
+        }
+        
 
 
         
