@@ -376,22 +376,28 @@ function sample_theme_customizer_css(){
             color: <?php echo get_theme_mod('sample_btn_text_hover', '#000'); ?>;
         }
         h1{
-            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+            font-family: <?php echo get_theme_mod('mytheme_h1_font', '"PT Serif", serif'); ?>;
         }
         h2{
-            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+            font-family: <?php echo get_theme_mod('mytheme_h2_font', '"PT Serif", serif'); ?>;
         }
         h3{
-            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+            font-family: <?php echo get_theme_mod('mytheme_h3_font', '"PT Serif", serif'); ?>;
         }
         h4{
-            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+            font-family: <?php echo get_theme_mod('mytheme_h4_font', '"PT Serif", serif'); ?>;
         }
         h5{
-            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+            font-family: <?php echo get_theme_mod('mytheme_h5_font', '"PT Serif", serif'); ?>;
         }
         h6{
-            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+            font-family: <?php echo get_theme_mod('mytheme_h6_font', '"PT Serif", serif'); ?>;
+        }
+        p{
+            font-family: <?php echo get_theme_mod('mytheme_h6_font', '"PT Serif", serif'); ?>;
+        }
+        a{
+            font-family: <?php echo get_theme_mod('mytheme_h6_font', '"PT Serif", serif'); ?>;
         }
 
 
