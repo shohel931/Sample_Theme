@@ -19,34 +19,7 @@
             </div>
             <div class="col-md-5">
                 <div class="menu_area">
-                <ul id="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a>
-            <ul>
-                <li><a href="#">Dropdown</a></li>
-                <li><a href="#">Dropdown</a></li>
-                <li><a href="#">Dropdown</a></li>
-                <li><a href="#">Dropdown</a></li>
-            </ul>
-               </li>
-                <li><a href="#">Service</a>
-                <ul>
-                <li><a href="#">Dropdown</a></li>
-                <li><a href="#">Dropdown</a></li>
-                <li><a href="#">Dropdown</a></li>
-                <li><a href="#">Dropdown</a></li>
-            </ul>
-               </li>
-                <li><a href="#">News</a>
-                <ul>
-                <li><a href="#">Dropdown</a></li>
-                <li><a href="#">Dropdown</a></li>
-                <li><a href="#">Dropdown</a></li>
-                <li><a href="#">Dropdown</a></li>
-            </ul>
-               </li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+               <?php wp_nav_menu(array('theme_location', 'main_menu', 'menu_id' => 'nav')); ?>
                 </div>
                 
             </div>
