@@ -23,7 +23,15 @@
                 </div>
                 
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="login_area">
+                    <?php if(is_user_logged_in()) : ?>
+                    <a class="btn_primary" href="<?php echo wp_logout_url(home_url()); ?>">Logout</a>
+                    <?php else : ?>
+                    <a class="btn_primary" href="<?php echo wp_login_url(); ?>">Login</a>
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
     </div>
 </header>
