@@ -224,6 +224,7 @@ function sample_theme_customizer_css(){
         .btn-primary{
             background-color: <?php echo get_theme_mod('sample_drop_menu', 'blue'); ?>;
             color: <?php echo get_theme_mod('sample_hover_menu', 'blue'); ?>;
+            border:1px solid <?php echo get_theme_mod('sample_hover_menu', 'blue'); ?>;
         }
 
 
