@@ -20,6 +20,7 @@ function sample_global_customize($wp_customize){
     ));
     $wp_customize->add_setting('sample_settings', array(
         'default' => get_template_directory_uri(). '/img/logo.png',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'sample_settings', array(
         'label' =>__('Logo', 'sample_theme'),
@@ -38,6 +39,7 @@ function sample_global_customize($wp_customize){
     // Coppyright Text
     $wp_customize->add_setting('sample_coppy_setting', array(
         'default' => '&COPY; Coppyright All Reversed',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'sample_coppy_setting', array(
         'label' =>__('Coppyright', 'sample_theme'),
@@ -47,6 +49,7 @@ function sample_global_customize($wp_customize){
     // Coppyright BG color Section
     $wp_customize->add_setting('sample_coppyright', array(
         'default' => '#000',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_coppyright', array(
         'label' => __('Background Color', 'sample_theme'),
@@ -56,6 +59,7 @@ function sample_global_customize($wp_customize){
     // Coppyright Text color Section
     $wp_customize->add_setting('sample_coppyright_text', array(
         'default' => '#fff',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_coppyright_text', array(
         'label' => __('Text Color', 'sample_theme'),
@@ -74,6 +78,7 @@ function sample_global_customize($wp_customize){
     // menu color
     $wp_customize->add_setting('sample_color_menu', array(
         'default' => '#000',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_color_menu', array(
         'label' => __('Menu Color', 'sample_theme'),
@@ -83,6 +88,7 @@ function sample_global_customize($wp_customize){
     // Menu Hover Color
     $wp_customize->add_setting('sample_hover_menu', array(
         'default' => 'blue',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_hover_menu', array(
         'label' => __('Menu Hover', 'sample_theme'),
@@ -93,6 +99,7 @@ function sample_global_customize($wp_customize){
     // Dropdown Menu  Color
     $wp_customize->add_setting('sample_drop_menu', array(
         'default' => 'blue',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_drop_menu', array(
         'label' => __('Dropdown Color', 'sample_theme'),
@@ -110,6 +117,7 @@ function sample_global_customize($wp_customize){
     // Widget BG Color
     $wp_customize->add_setting('sample_widget_bg', array(
         'default' => '#00FFFF',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_widget_bg', array(
         'label' => __('Background Color', 'sample_theme'),
@@ -126,6 +134,7 @@ function sample_global_customize($wp_customize){
     // Background Color
     $wp_customize->add_setting('sample_theme_color_picker', array(
         'default' => '#ffffff',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_theme_color_picker', array(
         'label' => __('Background Color', 'sample_theme'),
@@ -135,6 +144,7 @@ function sample_global_customize($wp_customize){
     // Header Color Section
     $wp_customize->add_setting('sample_headercolor', array(
         'default' => '#ffffff',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_headercolor', array(
         'label' => __('Header Color', 'sample_theme'),
@@ -152,6 +162,7 @@ function sample_global_customize($wp_customize){
      // Text Color
     $wp_customize->add_setting('sample_btn_text', array(
         'default' => '#ffffff',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_btn_text', array(
         'label' => __('Text Color', 'sample_theme'),
@@ -161,6 +172,7 @@ function sample_global_customize($wp_customize){
     // Background Color
     $wp_customize->add_setting('sample_btn_back', array(
         'default' => '#045CB4',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_btn_back', array(
         'label' => __('Background Color', 'sample_theme'),
@@ -170,6 +182,7 @@ function sample_global_customize($wp_customize){
     // Border Color
     $wp_customize->add_setting('sample_btn_border', array(
         'default' => '#262626',
+        'transport' => 'refresh',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_btn_border', array(
         'label' => __('Border Color', 'sample_theme'),
@@ -224,7 +237,8 @@ function sample_theme_customizer_css(){
         .btn-primary{
             background-color: <?php echo get_theme_mod('sample_drop_menu', 'blue'); ?>;
             color: <?php echo get_theme_mod('sample_hover_menu', 'blue'); ?>;
-            border:1px solid <?php echo get_theme_mod('sample_hover_menu', 'blue'); ?>;
+            border:1px solid <?php echo get_theme_mod('sample_hover_menu', '#262626'); ?>;
+            padding: <?php echo get_theme_mod('sample_hover_menu', '15px 20px'); ?>;
         }
 
 
