@@ -107,6 +107,24 @@ function sample_global_customize($wp_customize){
     )));
 
     
+    // Widget Section
+    $wp_customize-> add_section('sample_widget_color', array(
+        'title' => __('Widget Color', 'sample_theme'),
+        'priority' => 40,
+        'panel' => 'sample_theme_global',
+    ));
+    // Widget BG Color
+    $wp_customize->add_setting('sample_widget_bg', array(
+        'default' => '#00FFFF',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_widget_bg', array(
+        'label' => __('Color Picker', 'sample_theme'),
+        'description' => __('If you interested to update your widget bg color, you can do it here.', 'sample_theme'),
+        'setting' => 'sample_widget_bg',
+        'section' => 'sample_widget_color',
+    )));
+
+    
 
 
 
@@ -180,21 +198,6 @@ function sample_theme_customize($wp_customize){
     
     
 
-    // Widget BG Color
-    $wp_customize-> add_section('sample_widget', array(
-        'title' => __('Widget Color', 'sample_theme'),
-        'priority' => 70,
-        'panel' => 'sample_theme_allcolor',
-    ));
-    $wp_customize->add_setting('sample_widget_bg', array(
-        'default' => '#00FFFF',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_widget_bg', array(
-        'label' => __('Color Picker', 'sample_theme'),
-        'description' => __('If you interested to update your widget bg color, you can do it here.', 'sample_theme'),
-        'setting' => 'sample_widget_bg',
-        'section' => 'sample_widget',
-    )));
 
 
 
