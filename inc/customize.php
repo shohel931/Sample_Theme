@@ -137,6 +137,31 @@ function sample_theme_customize($wp_customize){
 
 
 
+    function sample_theme_customize($wp_customize){
+        $wp_customize-> add_panel('sample_theme_allcolor', array(
+            'title' => __('Menu Color', 'sample_theme'),
+            'priority' => 10,
+        ));
+
+    // Menu Color
+    $wp_customize-> add_section('sample_menu_color', array(
+        'title' => __('Menu Color', 'sample_theme'),
+        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
+        'priority' => 50,
+        'panel' => 'sample_theme_allcolor',
+    ));
+    $wp_customize->add_setting('sample_color_menu', array(
+        'default' => '#000',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_color_menu', array(
+        'label' => __('Color Picker', 'sample_theme'),
+        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
+        'setting' => 'sample_color_menu',
+        'section' => 'sample_menu_color',
+    )));
+
+
+    }
 
 
 
@@ -162,11 +187,12 @@ function sample_theme_customizer_css(){
             color: <?php echo get_theme_mod('sample_coppyright_text', '#fff'); ?>;
         }
         .menu_area ul li a{
-            color: <?php echo get_theme_mod('', '#000'); ?>;
+            color: <?php echo get_theme_mod('sample_color_menu', '#000'); ?>;
         }
         .menu_area ul li a:hover{
             color: <?php echo get_theme_mod('', 'blue'); ?>;
         }
+
 
         
     </style>

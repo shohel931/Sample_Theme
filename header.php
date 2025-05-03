@@ -21,7 +21,7 @@
                 <div class="menu_area">
                 <ul id="nav">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About us <i class="fa-solid fa-angle-down"></i></a>
+                <li><a href="#">About</a>
             <ul>
                 <li><a href="#">Dropdown</a></li>
                 <li><a href="#">Dropdown</a></li>
@@ -29,7 +29,7 @@
                 <li><a href="#">Dropdown</a></li>
             </ul>
                </li>
-                <li><a href="#">Service <i class="fa-solid fa-angle-down"></i></a>
+                <li><a href="#">Service</a>
                 <ul>
                 <li><a href="#">Dropdown</a></li>
                 <li><a href="#">Dropdown</a></li>
@@ -37,7 +37,7 @@
                 <li><a href="#">Dropdown</a></li>
             </ul>
                </li>
-                <li><a href="#">Blog <i class="fa-solid fa-angle-down"></i></a>
+                <li><a href="#">News</a>
                 <ul>
                 <li><a href="#">Dropdown</a></li>
                 <li><a href="#">Dropdown</a></li>
@@ -45,7 +45,7 @@
                 <li><a href="#">Dropdown</a></li>
             </ul>
                </li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
                 </div>
                 

@@ -32,8 +32,30 @@
 .menu_area ul li a:hover{
     color: blue;
 }
-
-
+/* Dropdown Menu */
+.menu_area ul li ul{
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    z-index: 1000;
+}
+.menu_area ul li:hover ul{
+    display: block;
+}
+.menu_area ul li ul li{
+    margin: 0;
+}
+.menu_area ul li ul li a{
+    color: #000;
+    padding: 5px 10px;
+    display: block;
+}
+.menu_area ul li ul li a:hover{
+    background: #007BFF;
+    color: #fff;
+}
 
 
 
