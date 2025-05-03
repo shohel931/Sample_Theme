@@ -63,8 +63,12 @@
 /* Footer Area */
 /* #footer_area{
 } */
+.footer_widgets{
+    background-color: aqua;
+}
 .coppyright_area{
     padding: 10px 0;
     color: #fff;
     text-align: center;
 }
+/* Widget area */

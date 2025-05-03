@@ -189,6 +189,22 @@ function sample_theme_customize($wp_customize){
         'section' => 'sample_menu_drop',
     )));
 
+    // Widget BG Color
+    $wp_customize-> add_section('sample_widget', array(
+        'title' => __('Widget Color', 'sample_theme'),
+        'priority' => 70,
+        'panel' => 'sample_theme_allcolor',
+    ));
+    $wp_customize->add_setting('sample_widget_bg', array(
+        'default' => '#00FFFF',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_widget_bg', array(
+        'label' => __('Color Picker', 'sample_theme'),
+        'description' => __('If you interested to update your widget bg color, you can do it here.', 'sample_theme'),
+        'setting' => 'sample_widget_bg',
+        'section' => 'sample_widget',
+    )));
+
 
 
 }
@@ -221,6 +237,9 @@ function sample_theme_customizer_css(){
         .menu_area ul li ul li a:hover{
             background-color: <?php echo get_theme_mod('sample_drop_menu', 'blue'); ?>;
             color: <?php echo get_theme_mod('sample_hover_menu', 'blue'); ?>;
+        }
+        .footer_widgets{
+            background-color: <?php echo get_theme_mod('sample_widget_bg', '#00FFFF'); ?>;
         }
 
 
