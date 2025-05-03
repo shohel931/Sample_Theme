@@ -55,6 +55,56 @@ function sample_global_customize($wp_customize){
         'setting' => 'sample_coppyright',
         'section' => 'sample_coppyright_area',
     )));
+    // Coppyright Text color Section
+    $wp_customize->add_setting('sample_coppyright_text', array(
+        'default' => '#fff',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_coppyright_text', array(
+        'label' => __('Text Color', 'sample_theme'),
+        'description' => __('If you interested to update your coppyright text color, you can do it here.', 'sample_theme'),
+        'setting' => 'sample_coppyright_text',
+        'section' => 'sample_coppyright_area',
+    )));
+
+
+    // Menu Area
+    $wp_customize-> add_section('sample_menu_area', array(
+        'title' =>__('Menu Color', 'sample_theme'),
+        'priority' => 30,
+        'panel' => 'sample_theme_global',
+    ));
+
+    // menu color
+    $wp_customize->add_setting('sample_color_menu', array(
+        'default' => '#000',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_color_menu', array(
+        'label' => __('Menu Color', 'sample_theme'),
+        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
+        'setting' => 'sample_color_menu',
+        'section' => 'sample_menu_area',
+    )));
+    // Menu Hover Color
+    $wp_customize->add_setting('sample_hover_menu', array(
+        'default' => 'blue',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_hover_menu', array(
+        'label' => __('Menu Hover', 'sample_theme'),
+        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
+        'setting' => 'sample_hover_menu',
+        'section' => 'sample_menu_area',
+    )));
+
+    // Dropdown Menu  Color
+    $wp_customize->add_setting('sample_drop_menu', array(
+        'default' => 'blue',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_drop_menu', array(
+        'label' => __('Dropdown Color', 'sample_theme'),
+        'description' => __('If you interested to update your dropdown menu color, you can do it here.', 'sample_theme'),
+        'setting' => 'sample_drop_menu',
+        'section' => 'sample_menu_area',
+    )));
 
     
 
@@ -117,85 +167,18 @@ function sample_theme_customize($wp_customize){
         'section' => 'sample_header_color',
     )));
 
-    // 
-    $wp_customize-> add_section('sample_coppy_color', array(
-        'title' => __('Coppyright Background Color', 'sample_theme'),
-        'description' => __('If you interested to update your coppyright bg color, you can do it here.', 'sample_theme'),
-        'priority' => 70,
-        'panel' => 'sample_theme_allcolor',
-    ));
    
 
-    // Coppyright Text color Section
-    $wp_customize-> add_section('sample_coppy_color_text', array(
-        'title' => __('Coppyright Text Color', 'sample_theme'),
-        'description' => __('If you interested to update your coppyright text color, you can do it here.', 'sample_theme'),
-        'priority' => 60,
-        'panel' => 'sample_theme_allcolor',
-    ));
-    $wp_customize->add_setting('sample_coppyright_text', array(
-        'default' => '#fff',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_coppyright_text', array(
-        'label' => __('Color Picker', 'sample_theme'),
-        'description' => __('If you interested to update your coppyright text color, you can do it here.', 'sample_theme'),
-        'setting' => 'sample_coppyright_text',
-        'section' => 'sample_coppy_color_text',
-    )));
 
+    
 
+    
+  
+    
 
-
-    // Menu Color
-    $wp_customize-> add_section('sample_menu_color', array(
-        'title' => __('Menu Color', 'sample_theme'),
-        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
-        'priority' => 10,
-        'panel' => 'sample_theme_allcolor',
-    ));
-    $wp_customize->add_setting('sample_color_menu', array(
-        'default' => '#000',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_color_menu', array(
-        'label' => __('Color Picker', 'sample_theme'),
-        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
-        'setting' => 'sample_color_menu',
-        'section' => 'sample_menu_color',
-    )));
-
-    // Menu Hover Color
-    $wp_customize-> add_section('sample_menu_hover', array(
-        'title' => __('Menu Hover', 'sample_theme'),
-        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
-        'priority' => 20,
-        'panel' => 'sample_theme_allcolor',
-    ));
-    $wp_customize->add_setting('sample_hover_menu', array(
-        'default' => 'blue',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_hover_menu', array(
-        'label' => __('Color Picker', 'sample_theme'),
-        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
-        'setting' => 'sample_hover_menu',
-        'section' => 'sample_menu_hover',
-    )));
-
-    // Dropdown Menu  Color
-    $wp_customize-> add_section('sample_menu_drop', array(
-        'title' => __('Dropdown Menu', 'sample_theme'),
-        'description' => __('If you interested to update your dropdown menu color, you can do it here.', 'sample_theme'),
-        'priority' => 30,
-        'panel' => 'sample_theme_allcolor',
-    ));
-    $wp_customize->add_setting('sample_drop_menu', array(
-        'default' => 'blue',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_drop_menu', array(
-        'label' => __('Color Picker', 'sample_theme'),
-        'description' => __('If you interested to update your dropdown menu color, you can do it here.', 'sample_theme'),
-        'setting' => 'sample_drop_menu',
-        'section' => 'sample_menu_drop',
-    )));
+    
+    
+    
 
     // Widget BG Color
     $wp_customize-> add_section('sample_widget', array(
