@@ -317,6 +317,30 @@ function sample_global_customize($wp_customize){
         'type'     => 'text',
     ) );
 
+    // P Font
+    $wp_customize->add_setting( 'mytheme_p_font', array(
+        'default'   => '"PT Serif", serif',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'mytheme_p_font', array(
+        'label'    => __( 'P Font', 'mytheme' ),
+        'section'  => 'sample_fonts_area',
+        'type'     => 'text',
+    ) );
+
+    // A Font
+    $wp_customize->add_setting( 'mytheme_a_font', array(
+        'default'   => '"PT Serif", serif',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'mytheme_a_font', array(
+        'label'    => __( 'A Font', 'mytheme' ),
+        'section'  => 'sample_fonts_area',
+        'type'     => 'text',
+    ) );
+
 
 
 
@@ -394,10 +418,10 @@ function sample_theme_customizer_css(){
             font-family: <?php echo get_theme_mod('mytheme_h6_font', '"PT Serif", serif'); ?>;
         }
         p{
-            font-family: <?php echo get_theme_mod('mytheme_h6_font', '"PT Serif", serif'); ?>;
+            font-family: <?php echo get_theme_mod('mytheme_p_font', '"PT Serif", serif'); ?>;
         }
         a{
-            font-family: <?php echo get_theme_mod('mytheme_h6_font', '"PT Serif", serif'); ?>;
+            font-family: <?php echo get_theme_mod('mytheme_a_font', '"PT Serif", serif'); ?>;
         }
 
 
