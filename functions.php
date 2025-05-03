@@ -14,6 +14,10 @@ include_once('inc/customize.php');
 include_once('inc/menu_register.php');
 
 
+// Widget Register
+include_once('inc/widget_register.php');
+
+
 
 
 
