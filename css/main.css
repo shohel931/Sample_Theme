@@ -89,5 +89,7 @@
     font-weight: 600;
 }
 .footer_widgets .col-md-4 h2{
-    color: blue;
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
 }
