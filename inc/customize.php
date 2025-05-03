@@ -191,7 +191,7 @@ function sample_global_customize($wp_customize){
     )));
     // Button Padding
     $wp_customize->add_setting( 'mytheme_btn_padding', array(
-        'default'   => '15px 30px',
+        'default'   => '15px 20px',
         'transport' => 'refresh',
     ) );
 
@@ -258,11 +258,11 @@ function sample_theme_customizer_css(){
             background-color: <?php echo get_theme_mod('sample_widget_bg', '#00FFFF'); ?>;
         }
         .btn-primary{
-            background-color: <?php echo get_theme_mod('sample_drop_menu', 'blue'); ?>;
-            color: <?php echo get_theme_mod('sample_hover_menu', 'blue'); ?>;
-            border:1px solid <?php echo get_theme_mod('sample_hover_menu', '#262626'); ?>;
-            padding: <?php echo get_theme_mod('sample_hover_menu', '15px 20px'); ?>;
-            border-radius: <?php echo get_theme_mod('sample_hover_menu', '5px'); ?>;
+            background-color: <?php echo get_theme_mod('sample_btn_back', '#045CB4'); ?>;
+            color: <?php echo get_theme_mod('sample_btn_text', '#ffffff'); ?>;
+            border:1px solid <?php echo get_theme_mod('sample_btn_border', '#262626'); ?>;
+            padding: <?php echo get_theme_mod('mytheme_btn_padding', '15px 20px'); ?>;
+            border-radius: <?php echo get_theme_mod('mytheme_border_redius', '5px'); ?>;
             display: inline-block;
             font-weight: bold;
         }
