@@ -138,7 +138,7 @@ function sample_theme_customize($wp_customize){
 
 
     function sample_theme_customize($wp_customize){
-        $wp_customize-> add_panel('sample_theme_allcolor', array(
+        $wp_customize-> add_panel('sample_theme_menu', array(
             'title' => __('Menu Color', 'sample_theme'),
             'priority' => 10,
         ));
@@ -147,8 +147,8 @@ function sample_theme_customize($wp_customize){
     $wp_customize-> add_section('sample_menu_color', array(
         'title' => __('Menu Color', 'sample_theme'),
         'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
-        'priority' => 50,
-        'panel' => 'sample_theme_allcolor',
+        'priority' => 10,
+        'panel' => 'sample_theme_menu',
     ));
     $wp_customize->add_setting('sample_color_menu', array(
         'default' => '#000',
@@ -158,6 +158,23 @@ function sample_theme_customize($wp_customize){
         'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
         'setting' => 'sample_color_menu',
         'section' => 'sample_menu_color',
+    )));
+
+    // Menu Hover Color
+    $wp_customize-> add_section('sample_menu_hover', array(
+        'title' => __('Menu Hover', 'sample_theme'),
+        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
+        'priority' => 20,
+        'panel' => 'sample_theme_menu',
+    ));
+    $wp_customize->add_setting('sample_hover_menu', array(
+        'default' => 'blue',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_hover_menu', array(
+        'label' => __('Color Picker', 'sample_theme'),
+        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
+        'setting' => 'sample_hover_menu',
+        'section' => 'sample_menu_hover',
     )));
 
 
