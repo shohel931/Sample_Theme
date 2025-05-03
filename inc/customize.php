@@ -172,7 +172,7 @@ function sample_global_customize($wp_customize){
         'default' => '#262626',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_btn_border', array(
-        'label' => __('Background Color', 'sample_theme'),
+        'label' => __('Border Color', 'sample_theme'),
         'setting' => 'sample_btn_border',
         'section' => 'sample_buttons_area',
     )));
@@ -220,6 +220,10 @@ function sample_theme_customizer_css(){
         }
         .footer_widgets{
             background-color: <?php echo get_theme_mod('sample_widget_bg', '#00FFFF'); ?>;
+        }
+        .btn-primary{
+            background-color: <?php echo get_theme_mod('sample_drop_menu', 'blue'); ?>;
+            color: <?php echo get_theme_mod('sample_hover_menu', 'blue'); ?>;
         }
 
 
