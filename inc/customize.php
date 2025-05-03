@@ -159,16 +159,26 @@ function sample_global_customize($wp_customize){
         'priority' => 60,
         'panel' => 'sample_theme_global',
     ));
-     // Text Color
-    $wp_customize->add_setting('sample_btn_text', array(
-        'default' => '#ffffff',
-        'transport' => 'refresh',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_btn_text', array(
-        'label' => __('Text Color', 'sample_theme'),
-        'setting' => 'sample_btn_text',
-        'section' => 'sample_buttons_area',
-    )));
+    // Text Color
+   $wp_customize->add_setting('sample_btn_text', array(
+       'default' => '#ffffff',
+       'transport' => 'refresh',
+   ));
+   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_btn_text', array(
+       'label' => __('Text Color', 'sample_theme'),
+       'setting' => 'sample_btn_text',
+       'section' => 'sample_buttons_area',
+   )));
+   // Text Hover
+  $wp_customize->add_setting('sample_btn_text_hover', array(
+      'default' => '#000',
+      'transport' => 'refresh',
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_btn_text_hover', array(
+      'label' => __('Text Hover', 'sample_theme'),
+      'setting' => 'sample_btn_text_hover',
+      'section' => 'sample_buttons_area',
+  )));
     // Background Color
     $wp_customize->add_setting('sample_btn_back', array(
         'default' => '#045CB4',
@@ -179,6 +189,17 @@ function sample_global_customize($wp_customize){
         'setting' => 'sample_btn_back',
         'section' => 'sample_buttons_area',
     )));
+    // Background Hover Color
+    $wp_customize->add_setting('sample_btn_bg_hover', array(
+        'default' => '#0B5ED7',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_btn_bg_hover', array(
+        'label' => __('Background Hover', 'sample_theme'),
+        'setting' => 'sample_btn_bg_hover',
+        'section' => 'sample_buttons_area',
+    )));
+
     // Border Color
     $wp_customize->add_setting('sample_btn_border', array(
         'default' => '#262626',
@@ -257,7 +278,7 @@ function sample_theme_customizer_css(){
         .footer_widgets{
             background-color: <?php echo get_theme_mod('sample_widget_bg', '#00FFFF'); ?>;
         }
-        .btn-primary{
+        .btn_primary{
             background-color: <?php echo get_theme_mod('sample_btn_back', '#045CB4'); ?>;
             color: <?php echo get_theme_mod('sample_btn_text', '#ffffff'); ?>;
             border:1px solid <?php echo get_theme_mod('sample_btn_border', '#262626'); ?>;
@@ -266,6 +287,10 @@ function sample_theme_customizer_css(){
             display: inline-block;
             font-weight: 400;
             text-decoration: none;
+        }
+        .btn_primary:hover{
+            background-color: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+            color: <?php echo get_theme_mod('sample_btn_text_hover', '#000'); ?>;
         }
 
 
