@@ -28,22 +28,38 @@ function sample_global_customize($wp_customize){
         'section' => 'sample_theme_logo',
     )));
 
+    // Coppyright Area
+    $wp_customize-> add_section('sample_coppyright_area', array(
+        'title' =>__('CoppyRight', 'sample_theme'),
+        'priority' => 20,
+        'panel' => 'sample_theme_global',
+    ));
+
     // Coppyright Text
-    $wp_customize-> add_section('sample_coppyright', array(
-      'title' =>__('Coppyright', 'sample_theme'),
-      'description' => __('If you interested to chenge coppyright text', 'sample_theme'),
-      'priority' => 20,
-      'panel' => 'sample_theme_global',
-  ));
-  $wp_customize->add_setting('sample_coppy_setting', array(
-      'default' => '&COPY; Coppyright All Reversed',
-  ));
-  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'sample_coppy_setting', array(
-      'label' =>__('Coppyright', 'sample_theme'),
-      'description' => __('If you interested to chenge coppyright text', 'sample_theme'),
-      'setting' => 'sample_coppy_setting',
-      'section' => 'sample_coppyright',
-  )));
+    $wp_customize->add_setting('sample_coppy_setting', array(
+        'default' => '&COPY; Coppyright All Reversed',
+    ));
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'sample_coppy_setting', array(
+        'label' =>__('Coppyright', 'sample_theme'),
+        'description' => __('If you interested to chenge coppyright text', 'sample_theme'),
+        'setting' => 'sample_coppy_setting',
+        'section' => 'sample_coppyright_area',
+    )));
+    // Coppyright BG color Section
+    $wp_customize->add_setting('sample_coppyright', array(
+        'default' => '#000',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_coppyright', array(
+        'label' => __('Background Color', 'sample_theme'),
+        'description' => __('If you interested to update your coppyright bg color, you can do it here.', 'sample_theme'),
+        'setting' => 'sample_coppyright',
+        'section' => 'sample_coppyright_area',
+    )));
+
+    
+
+
+
 
 
 
@@ -101,22 +117,14 @@ function sample_theme_customize($wp_customize){
         'section' => 'sample_header_color',
     )));
 
-    // Coppyright color Section
+    // 
     $wp_customize-> add_section('sample_coppy_color', array(
         'title' => __('Coppyright Background Color', 'sample_theme'),
         'description' => __('If you interested to update your coppyright bg color, you can do it here.', 'sample_theme'),
         'priority' => 70,
         'panel' => 'sample_theme_allcolor',
     ));
-    $wp_customize->add_setting('sample_coppyright', array(
-        'default' => '#000',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_coppyright', array(
-        'label' => __('Color Picker', 'sample_theme'),
-        'description' => __('If you interested to update your coppyright bg color, you can do it here.', 'sample_theme'),
-        'setting' => 'sample_coppyright',
-        'section' => 'sample_coppy_color',
-    )));
+   
 
     // Coppyright Text color Section
     $wp_customize-> add_section('sample_coppy_color_text', array(
