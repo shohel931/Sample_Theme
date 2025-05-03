@@ -172,6 +172,23 @@ function sample_theme_customize($wp_customize){
         'section' => 'sample_menu_hover',
     )));
 
+    // Dropdown Menu  Color
+    $wp_customize-> add_section('sample_menu_drop', array(
+        'title' => __('Dropdown Menu', 'sample_theme'),
+        'description' => __('If you interested to update your dropdown menu color, you can do it here.', 'sample_theme'),
+        'priority' => 20,
+        'panel' => 'sample_theme_allcolor',
+    ));
+    $wp_customize->add_setting('sample_drop_menu', array(
+        'default' => 'blue',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_drop_menu', array(
+        'label' => __('Color Picker', 'sample_theme'),
+        'description' => __('If you interested to update your dropdown menu color, you can do it here.', 'sample_theme'),
+        'setting' => 'sample_drop_menu',
+        'section' => 'sample_menu_drop',
+    )));
+
 
 
 }
@@ -199,6 +216,10 @@ function sample_theme_customizer_css(){
             color: <?php echo get_theme_mod('sample_color_menu', '#000'); ?>;
         }
         .menu_area ul li a:hover{
+            color: <?php echo get_theme_mod('sample_hover_menu', 'blue'); ?>;
+        }
+        .menu_area ul li ul li a:hover{
+            background-color: <?php echo get_theme_mod('sample_drop_menu', 'blue'); ?>;
             color: <?php echo get_theme_mod('sample_hover_menu', 'blue'); ?>;
         }
 
