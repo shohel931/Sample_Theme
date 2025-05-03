@@ -74,10 +74,11 @@
 /* Widget area */
 .footer_widgets .col-md-4 img{
     width: 30%;
+    margin: 6px 0;
 }
 .footer_widgets .col-md-4 ul{
     list-style: none;
-    margin: 0;
+    margin: 0 15px;
     padding: 0;
 }
 .footer_widgets .col-md-4 ul li{
@@ -89,7 +90,15 @@
     font-weight: 600;
 }
 .footer_widgets .col-md-4 h2{
-    padding: 0;
-    margin: 0;
     font-size: 30px;
+    margin: 6px 10px;
+}
+.footer_widgets .col-md-4 p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer_widgets .col-md-4 input{
+    border: 1px solid #ddd;
+    border-radius: 10px 0 0 10px;
+    height: 50px;
 }
