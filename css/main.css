@@ -100,11 +100,12 @@
 .footer_widgets .col-md-4 input{
     border: 1px solid #ddd;
     border-radius: 5px 0 0 5px;
+    margin: 0 12px;
 }
 .footer_widgets .col-md-4 button{
     border: 1px solid #ddd;
     border-radius:0 5px 5px 0;
-    margin-left: -1px;
+    margin-left: -12px;
     border-left: none;
     color: #fff;
     background: red;
