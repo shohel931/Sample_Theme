@@ -234,6 +234,89 @@ function sample_global_customize($wp_customize){
     ) );
 
 
+    // Font Area
+    $wp_customize-> add_section('sample_fonts_area', array(
+        'title' =>__('Fonts', 'sample_theme'),
+        'priority' => 70,
+        'panel' => 'sample_theme_global',
+    ));
+
+    
+    // H1 Font
+    $wp_customize->add_setting( 'mytheme_h1_font', array(
+        'default'   => '"PT Serif", serif',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'mytheme_h1_font', array(
+        'label'    => __( 'H1 Font', 'mytheme' ),
+        'section'  => 'sample_fonts_area',
+        'type'     => 'text',
+    ) );
+
+    
+    // H2 Font
+    $wp_customize->add_setting( 'mytheme_h2_font', array(
+        'default'   => '"PT Serif", serif',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'mytheme_h2_font', array(
+        'label'    => __( 'H2 Font', 'mytheme' ),
+        'section'  => 'sample_fonts_area',
+        'type'     => 'text',
+    ) );
+
+    
+    // H3 Font
+    $wp_customize->add_setting( 'mytheme_h3_font', array(
+        'default'   => '"PT Serif", serif',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'mytheme_h3_font', array(
+        'label'    => __( 'H3 Font', 'mytheme' ),
+        'section'  => 'sample_fonts_area',
+        'type'     => 'text',
+    ) );
+
+    
+    // H4 Font
+    $wp_customize->add_setting( 'mytheme_h4_font', array(
+        'default'   => '"PT Serif", serif',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'mytheme_h4_font', array(
+        'label'    => __( 'H4 Font', 'mytheme' ),
+        'section'  => 'sample_fonts_area',
+        'type'     => 'text',
+    ) );  
+
+    // H5 Font
+    $wp_customize->add_setting( 'mytheme_h5_font', array(
+        'default'   => '"PT Serif", serif',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'mytheme_h5_font', array(
+        'label'    => __( 'H5 Font', 'mytheme' ),
+        'section'  => 'sample_fonts_area',
+        'type'     => 'text',
+    ) );   
+
+    // H6 Font
+    $wp_customize->add_setting( 'mytheme_h6_font', array(
+        'default'   => '"PT Serif", serif',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'mytheme_h6_font', array(
+        'label'    => __( 'H6 Font', 'mytheme' ),
+        'section'  => 'sample_fonts_area',
+        'type'     => 'text',
+    ) );
+
 
 
 
@@ -291,6 +374,24 @@ function sample_theme_customizer_css(){
         .btn_primary:hover{
             background-color: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
             color: <?php echo get_theme_mod('sample_btn_text_hover', '#000'); ?>;
+        }
+        h1{
+            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+        }
+        h2{
+            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+        }
+        h3{
+            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+        }
+        h4{
+            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+        }
+        h5{
+            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
+        }
+        h6{
+            font-family: <?php echo get_theme_mod('sample_btn_bg_hover', '#0B5ED7'); ?>;
         }
 
 
