@@ -71,7 +71,7 @@ function sample_theme_customize($wp_customize){
     $wp_customize-> add_section('sample_theme_color', array(
         'title' => __('Background Color', 'sample_theme'),
         'description' => __('If you interested to update your background color, you can do it here.', 'sample_theme'),
-        'priority' => 10,
+        'priority' => 40,
         'panel' => 'sample_theme_allcolor',
     ));
     $wp_customize->add_setting('sample_theme_color_picker', array(
@@ -88,7 +88,7 @@ function sample_theme_customize($wp_customize){
     $wp_customize-> add_section('sample_header_color', array(
         'title' => __('Header Background Color', 'sample_theme'),
         'description' => __('If you interested to update your headervbg color, you can do it here.', 'sample_theme'),
-        'priority' => 20,
+        'priority' => 30,
         'panel' => 'sample_theme_allcolor',
     ));
     $wp_customize->add_setting('sample_headercolor', array(
@@ -105,7 +105,7 @@ function sample_theme_customize($wp_customize){
     $wp_customize-> add_section('sample_coppy_color', array(
         'title' => __('Coppyright Background Color', 'sample_theme'),
         'description' => __('If you interested to update your coppyright bg color, you can do it here.', 'sample_theme'),
-        'priority' => 30,
+        'priority' => 60,
         'panel' => 'sample_theme_allcolor',
     ));
     $wp_customize->add_setting('sample_coppyright', array(
@@ -122,7 +122,7 @@ function sample_theme_customize($wp_customize){
     $wp_customize-> add_section('sample_coppy_color_text', array(
         'title' => __('Coppyright Text Color', 'sample_theme'),
         'description' => __('If you interested to update your coppyright text color, you can do it here.', 'sample_theme'),
-        'priority' => 40,
+        'priority' => 50,
         'panel' => 'sample_theme_allcolor',
     ));
     $wp_customize->add_setting('sample_coppyright_text', array(
@@ -137,18 +137,13 @@ function sample_theme_customize($wp_customize){
 
 
 
-    function sample_theme_customize($wp_customize){
-        $wp_customize-> add_panel('sample_theme_menu', array(
-            'title' => __('Menu Color', 'sample_theme'),
-            'priority' => 10,
-        ));
 
     // Menu Color
     $wp_customize-> add_section('sample_menu_color', array(
         'title' => __('Menu Color', 'sample_theme'),
         'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
         'priority' => 10,
-        'panel' => 'sample_theme_menu',
+        'panel' => 'sample_theme_allcolor',
     ));
     $wp_customize->add_setting('sample_color_menu', array(
         'default' => '#000',
@@ -165,7 +160,7 @@ function sample_theme_customize($wp_customize){
         'title' => __('Menu Hover', 'sample_theme'),
         'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
         'priority' => 20,
-        'panel' => 'sample_theme_menu',
+        'panel' => 'sample_theme_allcolor',
     ));
     $wp_customize->add_setting('sample_hover_menu', array(
         'default' => 'blue',
@@ -176,9 +171,6 @@ function sample_theme_customize($wp_customize){
         'setting' => 'sample_hover_menu',
         'section' => 'sample_menu_hover',
     )));
-
-
-    }
 
 
 
@@ -207,7 +199,7 @@ function sample_theme_customizer_css(){
             color: <?php echo get_theme_mod('sample_color_menu', '#000'); ?>;
         }
         .menu_area ul li a:hover{
-            color: <?php echo get_theme_mod('', 'blue'); ?>;
+            color: <?php echo get_theme_mod('sample_hover_menu', 'blue'); ?>;
         }
 
 
