@@ -4,12 +4,17 @@
     margin: 0;
     position:fixed;
     width: 100%;
+    z-index:1000;
+    display: block;
 }
 #header_area .col-md-3 a{
     text-decoration: none;
 }
 #header_area .col-md-3 a img{
     width: 40%;
+}
+#contant_area{
+    padding-top: 100px;
 }
 
 /* Menu */
