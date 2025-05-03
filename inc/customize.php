@@ -71,7 +71,7 @@ function sample_theme_customize($wp_customize){
     $wp_customize-> add_section('sample_theme_color', array(
         'title' => __('Background Color', 'sample_theme'),
         'description' => __('If you interested to update your background color, you can do it here.', 'sample_theme'),
-        'priority' => 40,
+        'priority' => 50,
         'panel' => 'sample_theme_allcolor',
     ));
     $wp_customize->add_setting('sample_theme_color_picker', array(
@@ -88,7 +88,7 @@ function sample_theme_customize($wp_customize){
     $wp_customize-> add_section('sample_header_color', array(
         'title' => __('Header Background Color', 'sample_theme'),
         'description' => __('If you interested to update your headervbg color, you can do it here.', 'sample_theme'),
-        'priority' => 30,
+        'priority' => 40,
         'panel' => 'sample_theme_allcolor',
     ));
     $wp_customize->add_setting('sample_headercolor', array(
@@ -105,7 +105,7 @@ function sample_theme_customize($wp_customize){
     $wp_customize-> add_section('sample_coppy_color', array(
         'title' => __('Coppyright Background Color', 'sample_theme'),
         'description' => __('If you interested to update your coppyright bg color, you can do it here.', 'sample_theme'),
-        'priority' => 60,
+        'priority' => 70,
         'panel' => 'sample_theme_allcolor',
     ));
     $wp_customize->add_setting('sample_coppyright', array(
@@ -122,7 +122,7 @@ function sample_theme_customize($wp_customize){
     $wp_customize-> add_section('sample_coppy_color_text', array(
         'title' => __('Coppyright Text Color', 'sample_theme'),
         'description' => __('If you interested to update your coppyright text color, you can do it here.', 'sample_theme'),
-        'priority' => 50,
+        'priority' => 60,
         'panel' => 'sample_theme_allcolor',
     ));
     $wp_customize->add_setting('sample_coppyright_text', array(
@@ -176,7 +176,7 @@ function sample_theme_customize($wp_customize){
     $wp_customize-> add_section('sample_menu_drop', array(
         'title' => __('Dropdown Menu', 'sample_theme'),
         'description' => __('If you interested to update your dropdown menu color, you can do it here.', 'sample_theme'),
-        'priority' => 20,
+        'priority' => 30,
         'panel' => 'sample_theme_allcolor',
     ));
     $wp_customize->add_setting('sample_drop_menu', array(
