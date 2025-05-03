@@ -72,3 +72,22 @@
     text-align: center;
 }
 /* Widget area */
+.footer_widgets .col-md-4 img{
+    width: 30%;
+}
+.footer_widgets .col-md-4 ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer_widgets .col-md-4 ul li{
+    padding: 5px 0;
+}
+.footer_widgets .col-md-4 ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+.footer_widgets .col-md-4 h2{
+    color: blue;
+}
