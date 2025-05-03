@@ -51,7 +51,7 @@ function sample_global_customize($wp_customize){
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_coppyright', array(
         'label' => __('Background Color', 'sample_theme'),
-        'description' => __('If you interested to update your coppyright bg color, you can do it here.', 'sample_theme'),
+        'description' => __('If you interested to update your coppyright bg color.', 'sample_theme'),
         'setting' => 'sample_coppyright',
         'section' => 'sample_coppyright_area',
     )));
@@ -61,7 +61,7 @@ function sample_global_customize($wp_customize){
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_coppyright_text', array(
         'label' => __('Text Color', 'sample_theme'),
-        'description' => __('If you interested to update your coppyright text color, you can do it here.', 'sample_theme'),
+        'description' => __('If you interested to update your coppyright text color.', 'sample_theme'),
         'setting' => 'sample_coppyright_text',
         'section' => 'sample_coppyright_area',
     )));
@@ -80,7 +80,7 @@ function sample_global_customize($wp_customize){
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_color_menu', array(
         'label' => __('Menu Color', 'sample_theme'),
-        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
+        'description' => __('If you interested to update your menu color.', 'sample_theme'),
         'setting' => 'sample_color_menu',
         'section' => 'sample_menu_area',
     )));
@@ -90,7 +90,7 @@ function sample_global_customize($wp_customize){
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_hover_menu', array(
         'label' => __('Menu Hover', 'sample_theme'),
-        'description' => __('If you interested to update your menu color, you can do it here.', 'sample_theme'),
+        'description' => __('If you interested to update your menu color.', 'sample_theme'),
         'setting' => 'sample_hover_menu',
         'section' => 'sample_menu_area',
     )));
@@ -101,7 +101,7 @@ function sample_global_customize($wp_customize){
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_drop_menu', array(
         'label' => __('Dropdown Color', 'sample_theme'),
-        'description' => __('If you interested to update your dropdown menu color, you can do it here.', 'sample_theme'),
+        'description' => __('If you interested to update your dropdown menu color.', 'sample_theme'),
         'setting' => 'sample_drop_menu',
         'section' => 'sample_menu_area',
     )));
@@ -118,13 +118,72 @@ function sample_global_customize($wp_customize){
         'default' => '#00FFFF',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_widget_bg', array(
-        'label' => __('Color Picker', 'sample_theme'),
-        'description' => __('If you interested to update your widget bg color, you can do it here.', 'sample_theme'),
+        'label' => __('Background Color', 'sample_theme'),
+        'description' => __('If you interested to update your widget bg color.', 'sample_theme'),
         'setting' => 'sample_widget_bg',
         'section' => 'sample_widget_color',
     )));
 
-    
+    // Color Area
+    $wp_customize-> add_section('sample_color_area', array(
+        'title' =>__('Color', 'sample_theme'),
+        'priority' => 50,
+        'panel' => 'sample_theme_global',
+    ));
+    // Background Color
+    $wp_customize->add_setting('sample_theme_color_picker', array(
+        'default' => '#ffffff',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_theme_color_picker', array(
+        'label' => __('Background Color', 'sample_theme'),
+        'description' => __('If you interested to update your background color.', 'sample_theme'),
+        'setting' => 'sample_theme_color_picker',
+        'section' => 'sample_color_area',
+    )));
+    // Header Color Section
+    $wp_customize->add_setting('sample_headercolor', array(
+        'default' => '#ffffff',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_headercolor', array(
+        'label' => __('Header Color', 'sample_theme'),
+        'description' => __('If you interested to update your header bg color.', 'sample_theme'),
+        'setting' => 'sample_headercolor',
+        'section' => 'sample_color_area',
+    )));
+
+
+    // Button Area
+    $wp_customize-> add_section('sample_buttons_area', array(
+        'title' =>__('Buttons', 'sample_theme'),
+        'priority' => 60,
+        'panel' => 'sample_theme_global',
+    ));
+
+    $wp_customize->add_setting('sample_btn_text', array(
+        'default' => '#ffffff',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_btn_text', array(
+        'label' => __('Text Color', 'sample_theme'),
+        'setting' => 'sample_btn_text',
+        'section' => 'sample_buttons_area',
+    )));
+
+    $wp_customize->add_setting('sample_btn_back', array(
+        'default' => '#045CB4',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_btn_back', array(
+        'label' => __('Background Color', 'sample_theme'),
+        'setting' => 'sample_btn_back',
+        'section' => 'sample_buttons_area',
+    )));
+    $wp_customize->add_setting('sample_btn_border', array(
+        'default' => '#045CB4',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_btn_border', array(
+        'label' => __('Background Color', 'sample_theme'),
+        'setting' => 'sample_btn_border',
+        'section' => 'sample_buttons_area',
+    )));
 
 
 
@@ -138,71 +197,6 @@ function sample_global_customize($wp_customize){
 }
 add_action('customize_register', 'sample_global_customize');
 
-
-
-
-
-
-// All Color
-function sample_theme_customize($wp_customize){
-    $wp_customize-> add_panel('sample_theme_allcolor', array(
-        'title' => __('All Color', 'sample_theme'),
-        'priority' => 20,
-    ));
-
-
-    // Background Color Section
-    $wp_customize-> add_section('sample_theme_color', array(
-        'title' => __('Background Color', 'sample_theme'),
-        'description' => __('If you interested to update your background color, you can do it here.', 'sample_theme'),
-        'priority' => 50,
-        'panel' => 'sample_theme_allcolor',
-    ));
-    $wp_customize->add_setting('sample_theme_color_picker', array(
-        'default' => '#ffffff',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_theme_color_picker', array(
-        'label' => __('Color Picker', 'sample_theme'),
-        'description' => __('If you interested to update your background color, you can do it here.', 'sample_theme'),
-        'setting' => 'sample_theme_color_picker',
-        'section' => 'sample_theme_color',
-    )));
-
-    // Header Color Section
-    $wp_customize-> add_section('sample_header_color', array(
-        'title' => __('Header Background Color', 'sample_theme'),
-        'description' => __('If you interested to update your headervbg color, you can do it here.', 'sample_theme'),
-        'priority' => 40,
-        'panel' => 'sample_theme_allcolor',
-    ));
-    $wp_customize->add_setting('sample_headercolor', array(
-        'default' => '#ffffff',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'sample_headercolor', array(
-        'label' => __('Color Picker', 'sample_theme'),
-        'description' => __('If you interested to update your header bg color, you can do it here.', 'sample_theme'),
-        'setting' => 'sample_headercolor',
-        'section' => 'sample_header_color',
-    )));
-
-   
-
-
-    
-
-    
-  
-    
-
-    
-    
-    
-
-
-
-
-}
-add_action('customize_register', 'sample_theme_customize');
 
 
 
@@ -243,4 +237,7 @@ function sample_theme_customizer_css(){
     <?php
 }
 add_action('wp_head', 'sample_theme_customizer_css');
+
+
+
 
