@@ -189,6 +189,29 @@ function sample_global_customize($wp_customize){
         'setting' => 'sample_btn_border',
         'section' => 'sample_buttons_area',
     )));
+    // Button Padding
+    $wp_customize->add_setting( 'mytheme_btn_padding', array(
+        'default'   => '15px 30px',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'mytheme_btn_padding', array(
+        'label'    => __( 'Button Padding', 'mytheme' ),
+        'section'  => 'sample_buttons_area',
+        'type'     => 'text',
+    ) );
+    // Button Border Redius
+    $wp_customize->add_setting( 'mytheme_border_redius', array(
+        'default'   => '5px',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'mytheme_border_redius', array(
+        'label'    => __( 'Border Redius', 'mytheme' ),
+        'section'  => 'sample_buttons_area',
+        'type'     => 'text',
+    ) );
+
 
 
 
@@ -239,6 +262,9 @@ function sample_theme_customizer_css(){
             color: <?php echo get_theme_mod('sample_hover_menu', 'blue'); ?>;
             border:1px solid <?php echo get_theme_mod('sample_hover_menu', '#262626'); ?>;
             padding: <?php echo get_theme_mod('sample_hover_menu', '15px 20px'); ?>;
+            border-radius: <?php echo get_theme_mod('sample_hover_menu', '5px'); ?>;
+            display: inline-block;
+            font-weight: bold;
         }
 
 
