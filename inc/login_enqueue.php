@@ -19,3 +19,11 @@ function login_logo_change() {
 }
 add_action('login_enqueue_scripts', 'login_logo_change');
 
+
+function login_logo_url() {
+    return home_url();
+ 
+ }
+ add_filter('login_headerurl', 'login_logo_url');
+ 
+ 
