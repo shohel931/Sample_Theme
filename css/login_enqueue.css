@@ -50,7 +50,23 @@ body.login{
     text-align: right;
     padding: 0;
 }
+.login #backtoblog a{
+    padding: 6px 15px;
+    background-color: blueviolet;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+}
+.login #backtoblog a:hover{
+    background-color: rgb(49, 22, 168);
+    color: #fff;
+}
 
+.login form .input, .login form input[type=checkbox], .login input[type=text] {
+    background: aqua;
+    color: #000;
+    font-weight: 400;
+}
 
 .language-switcher{
    display: none;
