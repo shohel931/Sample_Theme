@@ -147,10 +147,13 @@
 }
 
 /* Post  */
+#contant_area .col-md-12{
+}
 #contant_area .blog_area{
-    width: 50%;
+    width: 100%;
     margin-bottom: 50px;
     border: 1px solid #000;
+    padding: 10px;
 }
 #contant_area .post_thumb{
     width: 100%;
