@@ -25,3 +25,7 @@ function sample_theme_fonts() {
     wp_enqueue_style('google-font', 'https://fonts.googleapis.com', array(), false);
 }
 add_action('wp_enqueue_scripts', 'sample_theme_fonts');
+
+
+// Theme Title
+add_theme_support('title-tag');
