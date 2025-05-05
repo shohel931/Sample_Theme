@@ -118,7 +118,13 @@
     background: red;
 }
 
-.home-page-content{
+.home_page_content{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.login_area{
     text-align: center;
 }
 
