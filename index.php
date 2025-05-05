@@ -2,7 +2,7 @@
    
 
 
-<h1>This is archive page</h1>
+
 
 <section id="contant_area">
     <div class="container">

@@ -129,7 +129,7 @@
 }
 
 
-
+/* 404 Page */
 #not_found{
     padding: 100px 0;
     text-align: center;
@@ -145,3 +145,37 @@
     font-weight: bold;
     padding: 20px 0;
 }
+
+/* Post  */
+#contant_area .blog_area{
+    width: 50%;
+    margin-bottom: 50px;
+    border: 1px solid #000;
+}
+#contant_area .post_thumb{
+    width: 100%;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+#contant_area .post_thumb img{
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+#contant_area .post_thumb:hover img{
+    transform: scale(1.1);
+}
+#contant_area .post_details{
+    width: 100%;
+}#contant_area .post_details h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+#contant_area .post_details h2 a{
+    color: #262626;
+    text-decoration: none;
+}
+#contant_area .post_details h2 a:hover{
+    color: #007BFF;
+}
+    
