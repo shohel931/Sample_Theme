@@ -22,6 +22,10 @@ include_once('inc/widget_register.php');
 include_once('inc/login_enqueue.php');
 
 
+// Login enqueue Register
+include_once('inc/default.php');
+
+
 
 
 

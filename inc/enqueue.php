@@ -27,5 +27,3 @@ function sample_theme_fonts() {
 add_action('wp_enqueue_scripts', 'sample_theme_fonts');
 
 
-// Theme Title
-add_theme_support('title-tag');

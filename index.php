@@ -13,20 +13,19 @@
                     while (have_posts()) : the_post(); 
                ?>
                 <div class="blog_area">
-
+                    <div class="post_thumb">
+                        <?php echo the_post_thumbnail(); ?>
+                    </div>
+                <?php  the_content(); ?>
                 </div>
                 <?php  
                  endwhile ;
-                 else 
+                 else :
                     _e('No Post Found');
                  endif ;
                  
                  ?>
-
-
-
-               <h2><?php  the_title(); ?></h2> 
-               <p><?php  the_content(); ?></p> 
+               
             </div>
         </div>
     </div>
