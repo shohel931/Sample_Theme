@@ -14,10 +14,7 @@ function sample_excerpt($more){
 }
 add_filter('excerpt_more', 'sample_excerpt');
 
-function sample_excerpt_length($length){
-    return 40;
-}
-add_filter('excerpt_length', 'sample_excerpt_length', 999);
+
 
 
 // Page Nav 
@@ -28,16 +25,15 @@ function sample_pagenav(){
     if (!$current_page = get_query_var('paged')) $current = 1;
     $args['base'] = str_replace(999999999, '%#%', get_pagenum_link(999999999));
     $args['total'] =$max;
-    $args['current'] = $current;
+    $args['current'] = $current_page;
     $total = 1;
     $args['prev_text'] = 'Prev';
     $args['next_text'] = 'Next';
-    if ($max > 1) echo '<pre>
+    if ($max > 1) echo '</pre>
     <div class="pagination">';
-    if ($total == 1 && $max > 1) $pages = '<p class="page">Page ' . $current . '<span> of </span>'
-    . $max . '</p>';
-    echo $pages . paginate_links($arge);
-    if ($max > 1) echo '</div> </pre>';
+    if ($total == 1 && $max > 1) $pages = '<h6 class="page">Page ' . $current_page . '<span> of </span> '. $max . '</h6>'; 
+    echo $pages . paginate_links();
+    if ($max > 1) echo '</div> <pre> ';
     
     
 }
