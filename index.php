@@ -26,10 +26,13 @@
                  endwhile ;
                  else :
                     _e('No Post Found');
-                 endif ;
-                 
-                 ?>
-               
+                 endif ;?>
+               <div class="page_nav">
+                <?php if ('sample_pagenav') {sample_pagenav();} else { ?>
+                    <?php next_posts_link(); ?>
+                    <?php Previous_posts_link(); ?>
+                <?php } ?>
+               </div>
             </div>
         </div>
     </div>

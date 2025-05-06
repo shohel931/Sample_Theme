@@ -34,7 +34,7 @@ function sample_pagenav(){
     $args['next_text'] = 'Next';
     if ($max > 1) echo '<pre>
     <div class="pagination">';
-    if ($total == 1 && $max > 1) $pages = '<p class="page">Page ' . $current . '<span>of</span>'
+    if ($total == 1 && $max > 1) $pages = '<p class="page">Page ' . $current . '<span> of </span>'
     . $max . '</p>';
     echo $pages . paginate_links($arge);
     if ($max > 1) echo '</div> </pre>';
