@@ -41,6 +41,16 @@
 
 
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+      <!-- <h2><?php echo get_option('myplugin_custom_message'); ?></h2>  -->
+        </div>
+</div>
+
+
+
+
 <?php get_footer(); ?>
 
     

@@ -151,8 +151,8 @@
 }
 #contant_area .blog_area{
     width: 100%;
-    margin-bottom: 50px;
-    border: 1px solid #000;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 5px #ddd;
     padding: 10px;
 }
 #contant_area .post_thumb{

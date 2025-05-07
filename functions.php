@@ -26,6 +26,17 @@ include_once('inc/login_enqueue.php');
 include_once('inc/default.php');
 
 
+// settings Register
+include_once('inc/settings.php');
+
+
+
+
+
+
+
+
+
 
 
 
