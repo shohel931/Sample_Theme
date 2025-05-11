@@ -4,11 +4,13 @@ function sample_api(){
     add_settings_field('coppy', 'Coppyright Text', 'coppy_func', 'general');
     add_settings_field('description', 'Description', 'description_func', 'general');
     add_settings_field('select', 'Select Color', 'select_func', 'general');
+    add_settings_field('checkbox', 'Checkbox', 'checkbox_func', 'general');
 
 
     register_setting('general', 'coppy');
     register_setting('general', 'description');
     register_setting('general', 'select');
+    register_setting('general', 'checkbox');
 
 
 }
@@ -38,4 +40,11 @@ function select_func(){
     </select>
 
    <?php
+}
+
+function checkbox_func(){
+    ?>
+     <input type="checkbox" name="checkbox"  value="1" <?php checked(1,get_option('checkbox'), true); ?>>
+
+    <?php
 }

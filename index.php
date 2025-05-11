@@ -9,6 +9,16 @@
         <div class="row">
             <div class="col-md-12">
           <h2 style="color: <?php echo get_option('select'); ?>">Hello World This is Me</h2>
+
+          <?php 
+          if (get_option('checkbox') == 1) {
+            ?> <h2>Hello World</h2>  <?php
+          } else {
+            ?> <h2>Gello World</h2> <?php
+          }
+          
+          ?>
+
             </div>
         </div>
     </div>
