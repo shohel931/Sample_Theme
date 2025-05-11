@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-          
+          <h2 style="color: <?php echo get_option('select'); ?>">Hello World This is Me</h2>
             </div>
         </div>
     </div>
