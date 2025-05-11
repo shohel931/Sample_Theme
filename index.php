@@ -9,6 +9,7 @@
         <div class="row">
             <div class="col-md-12">
           <h2 style="color: <?php echo get_option('select'); ?>">Hello World This is Me</h2>
+          <h2 > <?php echo get_option('radio'); ?></h2>
 
           <?php 
           if (get_option('checkbox') == 1) {
@@ -31,6 +32,7 @@
     <div class="row">
         <div class="col-md-12">
       <h2><?php echo get_option('coppy'); ?></h2> 
+      <p><?php echo get_option('description'); ?></p> 
         </div>
 </div>
 
