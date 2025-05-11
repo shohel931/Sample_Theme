@@ -66,9 +66,9 @@
 
 
 
-
 /* Footer Area */
 /* #footer_area{
+    width: 100%;
 } */
 .footer_widgets{
     background-color: aqua;
